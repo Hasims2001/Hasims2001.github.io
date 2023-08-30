@@ -1,0 +1,81 @@
+.mainCloud {
+  border-radius: 100px;
+  width: 50rem;
+  height: 16.5rem;
+  background: #ffffff;
+  /* background: #4a4a4a; */
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.beforemainCloud {
+  margin-top: 5rem;
+  border-radius: 100%;
+  margin-left: 3rem;
+  width: 20rem;
+  height: 20rem;
+  background: #ffffff;
+  /* background: #4a4a4a; */
+}
+.aftermainCloud {
+  /* margin-top: -9rem; */
+  margin-left: 8rem;
+  border-radius: 100%;
+  width: 30rem;
+  margin-right: -5rem;
+  margin-bottom: 4rem;
+  height: 22rem;
+  background: #ffffff;
+  /* background: #4a4a4a; */
+}
+.project-tech-stack {
+  margin-bottom: 0.5rem;
+}
+#slidingList{
+  margin-top: -2rem;
+}
+@media screen and (min-width: 426px) and (max-width: 769px) {
+  .aftermainCloud {
+    margin-left: 5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  #slidingList {
+    grid-row: 1 / span 2 !important;
+    grid-column: 1 / span 3 !important;
+  }
+  .slideshow {
+    margin-top: -1rem !important;
+  }
+  .website {
+    margin-top: 0rem !important;
+  }
+  .beforemainCloud {
+    height: 10rem;
+    /* width: 10rem !important; */
+    width: 0 !important;
+    margin-top: -5rem !important;
+  }
+  .mainCloud {
+    width: 18.7rem !important;
+    height: 35rem;
+  }
+  .aftermainCloud {
+    width: 0 !important;
+    /* width: 8rem !important; */
+    height: 8rem;
+    margin-left: 0rem !important;
+    margin-top: -2rem !important;
+  }
+  .project-title {
+    font-size: 1.5rem !important;
+  }
+  /* .website {
+    width: 100% !important;
+    margin-top: -5rem !important;
+  } */
+  .info {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 3;
+    margin-top: 10rem !important;
+  }
+}

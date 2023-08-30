@@ -1,0 +1,40 @@
+.mainCloud {
+  width: 19.5rem;
+  height: 28rem;
+
+  background: #ffffff;
+  /* background: #4a4a4a; */
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.beforemainCloud {
+  border-radius: 100px;
+  margin-left: 5rem;
+  width: 13rem;
+  height: 13rem;
+  /* background: #ffffff; */
+  /* background: #4a4a4a; */
+}
+.aftermainCloud {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  border-radius: 100px;
+  width: 8rem;
+  height: 8rem;
+  /* background: #fffdfd; */
+  /* background: #4a4a4a; */
+}
+/* .website:hover {
+  transform: scale(2.5);
+} */
+@media screen and (max-width: 321px) {
+  .cloud {
+    width: 18rem;
+  }
+  .website {
+    margin-left: 0px !important;
+    margin-bottom: 2px !important;
+  }
+}

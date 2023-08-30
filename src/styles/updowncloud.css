@@ -1,0 +1,26 @@
+.cloud_one,
+.cloud_two {
+  animation: move 6s ease infinite;
+  @include border-radius(100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  background: #ffffff;
+  height: 150px;
+  width: 150px;
+  box-shadow: #ffffff 65px -15px 0 -5px, #ffffff 25px -25px, #ffffff 30px 10px,
+    #ffffff 60px 15px 0 -10px, #ffffff 85px 5px 0 -5px;
+}
+
+.cloud_two {
+  top: 52%;
+  left: 0%;
+  animation-duration: 8s;
+}
+
+@keyframes move {
+  50% {
+    transform: translateY(-15px);
+  }
+}
