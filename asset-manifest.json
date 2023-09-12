@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.6959a1d7.css",
-    "main.js": "/static/js/main.7d9e306a.js",
+    "main.css": "/static/css/main.7287e92b.css",
+    "main.js": "/static/js/main.4ceeab9c.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/trypotnation1.png": "/static/media/trypotnation1.313c726bade1eaa04275.png",
     "static/media/profile.png": "/static/media/profile.8a030816823e2d640cd5.png",
-    "static/media/trypot1.png": "/static/media/trypot1.09acf6a932cf0dd767d5.png",
-    "static/media/resume.pdf": "/static/media/resume.4ee28579ece4ff9c8fe5.pdf",
-    "static/media/innervibe1.png": "/static/media/innervibe1.c63a7eaf04bab9accf44.png",
+    "static/media/resume.pdf": "/static/media/resume.1e7e230500ad86393b36.pdf",
     "static/media/poppins-devanagari-400-normal.woff": "/static/media/poppins-devanagari-400-normal.0e11b62db931f85340d4.woff",
     "static/media/mongodbIcon.png": "/static/media/mongodbIcon.f717d0a8ce2990e228e2.png",
     "static/media/poppins-devanagari-400-normal.woff2": "/static/media/poppins-devanagari-400-normal.64d5f06ee726edd58ca3.woff2",
@@ -27,12 +24,12 @@
     "static/media/poppins-latin-ext-400-normal.woff": "/static/media/poppins-latin-ext-400-normal.8cc52669c8e8a6735699.woff",
     "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.4f38b4331448d2313adc.woff2",
     "index.html": "/index.html",
-    "main.6959a1d7.css.map": "/static/css/main.6959a1d7.css.map",
-    "main.7d9e306a.js.map": "/static/js/main.7d9e306a.js.map",
+    "main.7287e92b.css.map": "/static/css/main.7287e92b.css.map",
+    "main.4ceeab9c.js.map": "/static/js/main.4ceeab9c.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6959a1d7.css",
-    "static/js/main.7d9e306a.js"
+    "static/css/main.7287e92b.css",
+    "static/js/main.4ceeab9c.js"
   ]
 }
