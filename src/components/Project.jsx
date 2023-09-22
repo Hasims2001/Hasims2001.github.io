@@ -122,20 +122,21 @@ export const Project = () => {
     },
     {
       id: 4,
-      name: "Trypot",
+      name: "Quanta",
       description:
-        "Project is based on Ecommerce website. User can book different products and view the details.",
-      // image: `${trypot1}`,
+        "Explore the new World of GenAI interview session. platform that leverages the power of generative AI to revolutionize the way individuals prepare for interviews across various categories.",
       image: [
-        "https://user-images.githubusercontent.com/58412185/250608401-4b8638a6-30db-46c5-88ed-bc62b6baa02a.png",
-        "https://user-images.githubusercontent.com/58412185/250608598-b8b3c038-8627-4170-b11e-09c9616b2944.png",
-        "https://user-images.githubusercontent.com/58412185/250608689-b9376214-b9c9-4642-bc5f-fd1d3c3d5725.png",
+        "https://user-images.githubusercontent.com/58412185/265608803-8ad8a474-8df0-4539-a507-f5daefbb2fd5.png",
+        "https://user-images.githubusercontent.com/58412185/265608899-a0d3034d-7a98-43cd-bbc5-5242d028ab1d.png",
+        "https://user-images.githubusercontent.com/58412185/265609159-e3130aea-d0fd-444e-8ed1-feaedb6614a0.png",
        
       ],
-      tech: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/Hasims2001/spicy-representative-2917",
-      demo: "https://trypot.netlify.app/index.html",
+      tech: ["React.js", "TailwindCSS", "TypeScript", "Node", "Express.js", "Java", "OpenAI"],
+      github: "https://github.com/Hasims2001/quanta",
+      demo: "https://enchanting-truffle-893185.netlify.app",
+
     },
+   
    
   ];
   return (

@@ -1,6 +1,6 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import download from "../image/download.png";
@@ -12,14 +12,30 @@ export const Navbar = () => {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 425px)" });
   const isBigScreen = useMediaQuery({ query: "(min-width: 426px)" });
   const [show, setShow] = useState(false);
-
+  const [quote, setquote] = useState("");
   const handleClick = () => {
     window.open(
-      "https://drive.google.com/file/d/1z1qbDKba_Q4dyfDhnUGpgeJ9QU7ddROW/view?usp=sharing",
+      "https://drive.google.com/file/d/1R5Qp_t28ytxA7miB2799Wyr8LJdaJuJd/view?usp=sharing",
       "_blank"
     );
   };
 
+  useMemo(()=>{
+    // useEffect(()=>{
+      const getQuote = async()=>{
+          try {
+            let res = await fetch("https://api.quotable.io/quotes/random?tags=technology");
+            res = await res.json();
+            setquote(res[0].content);
+
+          } catch (error) {
+            console.log(error);
+          }
+      }
+      getQuote();
+    // }, []);
+  }, []); 
+ 
   return (
     <>
       {isBigScreen && (
@@ -125,7 +141,7 @@ export const Navbar = () => {
  
             <a
               href={require("../image/resume.pdf")}
-              download={"Mohammad-Hasim-Shaikh-resume"}
+              download={"Mohammad-Hasim-Shaikh-Resume"}
               className="nav-link resume"
               id="resume-button-1"
             >
@@ -142,15 +158,27 @@ export const Navbar = () => {
       {isSmallScreen && (
         <>
           {!show ? (
-            <Flex justifyContent={"flex-start"}>
+            <Flex justifyContent={"flex-start"}   
+            position={"fixed"}
+            w={"100%"}
+            zIndex={11}
+            borderRadius={"20px"}
+            bg={"brand.300"}
+            color={"brand.400"}
+            alignItems={'center'}
+            gap={".1rem"}
+            >
               <HamburgerIcon
                 onClick={() => setShow(true)}
                 color={"brand.400"}
                 boxSize={10}
-                mt={"2rem"}
+                bg={"brand.300"}
+                mt={".5rem"}
+                mb={".5rem"}
                 ml={"2rem"}
                 id="hamIcon"
               />
+              <marquee>{quote}</marquee>
             </Flex>
           ) : (
             <Stack
@@ -182,6 +210,7 @@ export const Navbar = () => {
               <span style={{ cursor: "pointer" }}>
                 <Link
                   activeClass="active"
+                  onClick={() => setShow(false)}
                   to="home"
                   spy={true}
                   smooth={true}
@@ -199,6 +228,7 @@ export const Navbar = () => {
                 <Link
                   activeClass="active"
                   to="section2"
+                  onClick={() => setShow(false)}
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -215,6 +245,7 @@ export const Navbar = () => {
                 <Link
                   activeClass="active"
                   to="section3"
+                  onClick={() => setShow(false)}
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -231,6 +262,7 @@ export const Navbar = () => {
                 <Link
                   activeClass="active"
                   to="section4"
+                  onClick={() => setShow(false)}
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -247,6 +279,7 @@ export const Navbar = () => {
                 <Link
                   activeClass="active"
                   to="section5"
+                  onClick={() => setShow(false)}
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -263,7 +296,7 @@ export const Navbar = () => {
                 <a
                   href={require("../image/resume.pdf")}
                   id="resume-button-1"
-                  download={"Mohammad-Hasim-Shaikh-resume"}
+                  download={"Mohammad-Hasim-Shaikh-Resume"}
                   className="nav-link resume"
                 >
                   <Flex alignItems={"center"} gap={".2rem"}>

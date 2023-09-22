@@ -24,20 +24,19 @@ export const About = ({ scrollPosition }) => {
   ]);
   const handleClick = () => {
     window.open(
-      "https://drive.google.com/file/d/1z1qbDKba_Q4dyfDhnUGpgeJ9QU7ddROW/view?usp=sharing",
+      "https://drive.google.com/file/d/1R5Qp_t28ytxA7miB2799Wyr8LJdaJuJd/view?usp=sharing",
       "_blank"
     );
   };
   useEffect(() => {
     if (scrollPosition >= 3) {
-      console.log("animateing");
       setNamingAnimate([
         "animate__animated",
         "animate__slideOutDown",
         "animate__slow",
       ]);
     }
-    if (scrollPosition < 10) {
+    if (scrollPosition < 200) {
       setNamingAnimate([
         "animate__animated",
         "animate__slideInUp",
@@ -49,20 +48,20 @@ export const About = ({ scrollPosition }) => {
   return (
     <div id="about" className="about section">
       <div id="background-wrap">
-        <div class="x1">
-          <div class="sliding_cloud"></div>
+        <div className="x1">
+          <div className="sliding_cloud"></div>
         </div>
 
-        <div class="x2">
-          <div class="sliding_cloud"></div>
+        <div className="x2">
+          <div className="sliding_cloud"></div>
         </div>
 
-        <div class="x3">
-          <div class="sliding_cloud"></div>
+        <div className="x3">
+          <div className="sliding_cloud"></div>
         </div>
 
-        <div class="x4">
-          <div class="sliding_cloud"></div>
+        <div className="x4">
+          <div className="sliding_cloud"></div>
         </div>
       </div>
       <Box>
@@ -76,7 +75,8 @@ export const About = ({ scrollPosition }) => {
           <Heading visibility={"hidden"}>About me</Heading>
         </Box>
         <Flex
-          pb={"10rem"}
+          // pb={"10rem"}
+          p={"0px 0.5rem 10rem"}
           zIndex={10}
           position={"relative"}
           alignItems={"center"}
@@ -121,15 +121,7 @@ export const About = ({ scrollPosition }) => {
                 "left",
                 "left",
               ]}
-            >
-              versatile, Passionate Full Stack Web Developer with a robust
-              command of Frontend and Backend technologies. Committed to staying
-              current with industry trends and tech for delivering innovative
-              solutions. Skilled in the MERN stack and willing to start a career
-              with an organization that provides an opportunity to improve
-              skills and knowledge gained as well as to grow along with the
-              organization's goal.
-            </Text>
+            >Full-stack web developer with a strong work ethic, boasting a proven track record of delivering user and admin-focused projects. Committed to continuous learning and innovation, with 1200+ hours of coding experience, 450+ hours dedicated to data structures and algorithms, and 100+ hours invested in soft skill development.</Text>
             <Flex
               mt={"1rem"}
               alignItems={"center"}
@@ -152,9 +144,9 @@ export const About = ({ scrollPosition }) => {
               >
                 <a
                   href={require("../image/resume.pdf")}
-                  download={"Mohammad-Hasim-Shaikh-resume"}
+                  download={"Mohammad-Hasim-Shaikh-Resume"}
                   className="nav-link resume"
-                  id="resume-button-1"
+                  id="resume-button-2"
                 >
                   <Flex alignItems={"center"} gap={".2rem"}>
                     <Text>Resume</Text>

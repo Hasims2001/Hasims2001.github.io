@@ -19,9 +19,11 @@ export const ProjectCloud = ({
   const isBigMobile = useMediaQuery({
     query: "only screen and (min-width:320px) and (max-width: 425px)",
   });
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 425px)" });
+  const isBigScreen = useMediaQuery({ query: "(min-width: 426px)" });
   return (
     <Box color={"brand.400"} className="project-card">
-      <UL istable={isTable.toString()} isbigmobile={isBigMobile.toString()}>
+     {isBigScreen && <UL istable={isTable.toString()} isbigmobile={isBigMobile.toString()}>
         <li
           style={{
             gridRow: "1 / span 2",
@@ -67,7 +69,7 @@ export const ProjectCloud = ({
         <li
           className="info"
           style={{
-            marginTop: "5.7rem",
+            marginTop: "4rem",
             gridRow: "2 / span 1",
             gridColumn: "1 / span 3",
             padding: "0 2.5rem",
@@ -93,7 +95,31 @@ export const ProjectCloud = ({
             <p className="project-description">{description}</p>
           </Box>
         </li>
-      </UL>
+      </UL>}
+      {isSmallScreen && <Box m={'auto'} bg={'brand.300'} w={"90vw"} borderRadius={"1rem"}>
+        <SlidingImage images={image} />
+        <Box p={"1rem"} pb={"2rem"}> 
+        <Flex justifyContent={"space-evenly"} alignItems={"center"}>
+            <Heading as={"h3"} fontWeight={"normal"} className="project-title">
+              {name}
+            </Heading>
+            <Flex gap={".5rem"} alignItems={"center"}>
+              <a href={github} target="blank" className="project-github-link">
+                <Image src={githubPNG} w={"90%"} />
+              </a>
+              <a href={demo} target="blank" className="project-deployed-link">
+                <Image src={wwwPNG} />
+              </a>
+            </Flex>
+          </Flex>
+          <Box>
+            <p style={{ fontWeight: "bold" }} className="project-tech-stack">
+              Tech Stack: {tech.join(" | ")}
+            </p>
+            <p className="project-description">{description}</p>
+          </Box>
+          </Box>
+        </Box>}
     </Box>
   );
 };

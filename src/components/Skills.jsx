@@ -103,15 +103,16 @@ export const Skills = () => {
 
       <DIV>
         <div id="background-wrap" style={{ paddingTop: "0px" }}>
-          <div class="animation-container">
+          <div className="animation-container">
             {arrSkill.reverse().map(({ id, skill, img }) => (
-              <div key={id} class="x2">
-                <div class="sliding_cloud">
-                  <p>{skill}</p>
+              <div key={id} className="x2 skills-card">
+                <div className="sliding_cloud">
+                  <p className="skills-card-name">{skill}</p>
                   <Image
                     position={"absolute"}
                     top={16}
                     w={"45%"}
+                    className="skills-card-img"
                     animation={"roatedImage 5s linear infinite"}
                     filter={"drop-shadow(-10px 5px 0px #000000)"}
                     left={24}
@@ -124,16 +125,17 @@ export const Skills = () => {
         </div>
 
         <div id="background-wrap">
-          <div class="animation-container">
+          <div className="animation-container">
             {arrToolSkill.reverse().map(({ id, skill, img }) => (
-              <div key={id} class="x2">
-                <div class="sliding_cloud">
-                  <p>{skill}</p>
+              <div key={id} className="x2 skills-card">
+                <div className="sliding_cloud">
+                  <p className="skills-card-name">{skill}</p>
                   <Image
                     position={"absolute"}
                     zIndex={1}
                     top={16}
                     w={"45%"}
+                    className="skills-card-img"
                     animation={"roatedImage 5s linear infinite"}
                     filter={"drop-shadow(-10px 5px 0px #000000)"}
                     left={24}
