@@ -121,7 +121,8 @@ export const About = ({ scrollPosition }) => {
                 "left",
                 "left",
               ]}
-            >Full-stack web developer with a strong work ethic, boasting a proven track record of delivering user and admin-focused projects. Committed to continuous learning and innovation, with 1200+ hours of coding experience, 450+ hours dedicated to data structures and algorithms, and 100+ hours invested in soft skill development.</Text>
+            >
+            Full Stack Web Developer with a rapid learning ability. Proficient in Generative AI, JavaScript, Python and adept at crafting diverse projects for user and admin interfaces. Committed to continuous learning and innovation, with 1200+ hours of coding experience, 450+ hours dedicated to data structures and algorithms, and 100+ hours invested in soft skill development.</Text>
             <Flex
               mt={"1rem"}
               alignItems={"center"}

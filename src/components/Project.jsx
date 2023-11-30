@@ -1,40 +1,15 @@
 import {
   Box,
-  Flex,
-  GridItem,
   Heading,
-  Image,
   SimpleGrid,
 } from "@chakra-ui/react";
 import React from "react";
 
-import { BigCloud } from "./BigCloud";
-import trypotnation1 from "../image/trypotnation1.png";
-import innevibe1 from "../image/innervibe1.png";
-import trypot1 from "../image/trypot1.png";
 
 import { ProjectCloud } from "./ProjectCloud";
-import { useState } from "react";
-import { useEffect } from "react";
+
 export const Project = () => {
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const [classes, setClasses] = useState("");
-  // const handleScroll = () => {
-  //   const position = window.pageYOffset;
-  //   setScrollPosition(position);
-  //   if (scrollPosition === 800) {
-  //     setClasses("animate__animated animate__backInUp");
-  //   } else {
-  //   }
-  // };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll, { passive: true });
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // });
 
   const arrProject = [
     {
@@ -63,6 +38,30 @@ export const Project = () => {
     },
     {
       id: 1,
+      name: "Talent Forge",
+      description:
+        "Cutting-edge job matching platform leverages the power of GenAI integration, empowering recruiters to connect with ideal candidates and enabling job seekers to discover tailored opportunities.",
+    
+      image: [
+        "https://user-images.githubusercontent.com/58412185/264219084-2b7f5a2c-18ed-4d0b-8e7d-281c8e99fb46.png",
+        "https://user-images.githubusercontent.com/58412185/264219186-36e41b57-0ed6-4e18-8de8-fddec9f14cdb.png",
+        "https://user-images.githubusercontent.com/58412185/264219233-0e67dab5-8848-4f78-9aba-e429908d4076.png",
+        "https://user-images.githubusercontent.com/58412185/264219299-d58f7302-122d-4afb-9fae-f7798ef09b83.png",
+        "https://user-images.githubusercontent.com/58412185/264219386-f90b7a9e-ab1a-49ee-bef8-f3a3752c4592.png",
+        "https://user-images.githubusercontent.com/58412185/264219678-e2d6ba64-cc88-4f80-83cf-da01b6ff32fd.png",
+        "https://user-images.githubusercontent.com/58412185/264219779-a3ddca74-8886-499b-a45d-b62a2d7190af.png",
+        "https://user-images.githubusercontent.com/58412185/264219881-e2d7e2a1-112e-47e1-9542-846eedeb3e66.png",
+        "https://user-images.githubusercontent.com/58412185/264219992-99487bb6-2b76-4843-a008-d5ad083e69e4.png",
+        "https://user-images.githubusercontent.com/58412185/264220145-a394055c-830b-485d-b0b9-b6ba8e702e44.png",
+
+    
+      ],
+      tech: ["Flask","MySQL","Python","Redux","GenAI","React.js", "Chakra UI", ],
+      github: "https://github.com/Hasims2001/TalentForge",
+      demo: "https://recipeswap.netlify.app/",
+    },
+    {
+      id: 2,
       name: "Trypot Nation",
       description:
         "Experience seamless booking of holiday packages in our tourism-based project, offering a fully responsive website for users across various screen sizes. Professional admin dashboard for efficient data management.",
@@ -82,9 +81,8 @@ export const Project = () => {
       github: "https://github.com/Hasims2001/indigo-price-1615",
       demo: "https://trypot-nation-dkah.netlify.app/",
     },
-
     {
-      id: 2,
+      id: 3,
       name: "Inner Vibe",
       description:
         "Project is based on Health Treatment and Therapies. User can book their appointment and view the details. Website is fully responsive on different screen sizes. Professional Deshboard for Admin to manage the data.",
@@ -100,7 +98,7 @@ export const Project = () => {
       demo: "https://innervibe.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       name: "Thunder Tech",
       description:
         "Explore a vast array of products, effortlessly filter and sort, while our Firebase backend ensures seamless user authentication by Google and GitHub logins. Admin-side controls for comprehensive CRUD functionality.",
@@ -121,7 +119,7 @@ export const Project = () => {
       demo: "https://thundertech.vercel.app/",
     },
     {
-      id: 4,
+      id: 5,
       name: "Quanta",
       description:
         "Explore the new World of GenAI interview session. platform that leverages the power of generative AI to revolutionize the way individuals prepare for interviews across various categories.",
@@ -151,13 +149,6 @@ export const Project = () => {
             <ProjectCloud {...item} />
           </Box>
         ))}
-        {/* <SimpleGrid gridTemplateColumns={1}>
-          {arrProject.map((item) => (
-            <GridItem key={item.id}>
-              <ProjectCloud {...item} />
-            </GridItem>
-          ))}
-        </SimpleGrid> */}
       </SimpleGrid>
     </Box>
   );

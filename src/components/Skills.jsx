@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Flex, Text } from "@chakra-ui/react";
+import { Box, Heading, Image} from "@chakra-ui/react";
 import React from "react";
 // import "../styles/smallcloud.css";
 import "../styles/simplecloud.css";
@@ -18,6 +18,7 @@ import androidIcon from "../image/androidIcon.png";
 import postmanIcon from "../image/postmanIcon.png";
 import firebaseIcon from "../image/firebaseIcon.png";
 import cypressIcon from "../image/cypressIcon.png";
+import promptIcon from "../image/promptIcon.png";
 import { styled } from "styled-components";
 export const Skills = () => {
   const arrSkill = [
@@ -40,6 +41,11 @@ export const Skills = () => {
       id: 4,
       skill: "MongoDB",
       img: mongodbIcon,
+    },
+    {
+      id: 9,
+      skill: "Prompt Eng.",
+      img: promptIcon
     },
     {
       id: 5,
@@ -107,11 +113,11 @@ export const Skills = () => {
             {arrSkill.reverse().map(({ id, skill, img }) => (
               <div key={id} className="x2 skills-card">
                 <div className="sliding_cloud">
-                  <p className="skills-card-name">{skill}</p>
+                  <p className="skills-card-name" >{skill}</p>
                   <Image
                     position={"absolute"}
                     top={16}
-                    w={"45%"}
+                    w={"40%"}
                     className="skills-card-img"
                     animation={"roatedImage 5s linear infinite"}
                     filter={"drop-shadow(-10px 5px 0px #000000)"}

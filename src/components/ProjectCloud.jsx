@@ -69,7 +69,7 @@ export const ProjectCloud = ({
         <li
           className="info"
           style={{
-            marginTop: "4rem",
+            marginTop: "6rem",
             gridRow: "2 / span 1",
             gridColumn: "1 / span 3",
             padding: "0 2.5rem",
