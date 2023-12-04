@@ -19,6 +19,8 @@ import postmanIcon from "../image/postmanIcon.png";
 import firebaseIcon from "../image/firebaseIcon.png";
 import cypressIcon from "../image/cypressIcon.png";
 import promptIcon from "../image/promptIcon.png";
+import pythonIcon from "../image/pythonIcon.png";
+import flaskIcon from "../image/flaskIcon.png";
 import { styled } from "styled-components";
 export const Skills = () => {
   const arrSkill = [
@@ -46,6 +48,16 @@ export const Skills = () => {
       id: 9,
       skill: "Prompt Eng.",
       img: promptIcon
+    },
+    {
+      id: 10,
+      skill: "Python",
+      img: pythonIcon
+    },
+    {
+      id: 11,
+      skill: "Flask",
+      img: flaskIcon
     },
     {
       id: 5,
