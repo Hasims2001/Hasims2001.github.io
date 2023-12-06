@@ -126,7 +126,7 @@ export const Project = () => {
         "https://user-images.githubusercontent.com/58412185/265609159-e3130aea-d0fd-444e-8ed1-feaedb6614a0.png",
        
       ],
-      tech: ["React.js", "TailwindCSS", "TypeScript", "Node", "Express.js", "Java", "OpenAI"],
+      tech: ["React.js", "TailwindCSS", "TypeScript", "Node", "Express.js",  "OpenAI"],
       github: "https://github.com/Hasims2001/quanta",
       demo: "https://enchanting-truffle-893185.netlify.app",
 

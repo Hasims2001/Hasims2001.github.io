@@ -1,11 +1,9 @@
 import React from "react";
 import {
   Box,
-  Button,
   Flex,
   Heading,
   Image,
-  Link,
   Text,
 } from "@chakra-ui/react";
 import "../styles/simplecloud.css";
@@ -76,7 +74,7 @@ export const About = ({ scrollPosition }) => {
         </Box>
         <Flex
           // pb={"10rem"}
-          p={"0px 0.5rem 10rem"}
+          p={"0px 1rem 10rem"}
           zIndex={10}
           position={"relative"}
           alignItems={"center"}
