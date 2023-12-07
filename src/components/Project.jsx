@@ -43,7 +43,7 @@ export const Project = () => {
         "Cutting-edge job matching platform leverages the power of GenAI integration, empowering recruiters to connect with ideal candidates and enabling job seekers to discover tailored opportunities.",
     
       image: [
-       "https://github-production-user-asset-6210df.s3.amazonaws.com/58412185/287499734-7be9828e-fd56-42bb-8980-828715c204d1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231206T044737Z&X-Amz-Expires=300&X-Amz-Signature=19063cb96bd43a31a556eeb3a6ef0b1324864a53484eac674ff65eb59b7f6a86&X-Amz-SignedHeaders=host&actor_id=58412185&key_id=0&repo_id=721971027",
+       "https://github.com/Hasims2001/TalentForge/assets/58412185/7be9828e-fd56-42bb-8980-828715c204d1",
        "https://github.com/Hasims2001/TalentForge/assets/58412185/9bacaba2-2292-4810-9a10-d4b5232798c4",
        "https://github.com/Hasims2001/TalentForge/assets/58412185/310a36c3-6c38-4434-a530-cbef388d9ca4",
        "https://github.com/Hasims2001/TalentForge/assets/58412185/28a64051-e401-47c0-b9d2-e36e5ab5d448",

@@ -11,7 +11,7 @@ import emailIcon from "../image/emailIcon.png";
 // import emailIcon from "../image/icon.png";
 export const Contact = () => {
   return (
-    <Box mt={"2rem"} pb={"2rem"} color={"brand.400"} id="contact">
+    <Box pt={"2rem"} pb={"5rem"} color={"brand.400"} id="contact">
       <Box>
         <Heading>Contact</Heading>
       </Box>
