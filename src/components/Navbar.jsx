@@ -15,7 +15,7 @@ export const Navbar = () => {
   const [quote, setquote] = useState("");
   const handleClick = () => {
     window.open(
-      "https://drive.google.com/file/d/1R5Qp_t28ytxA7miB2799Wyr8LJdaJuJd/view?usp=sharing",
+      "https://drive.google.com/file/d/1NMF1P8tBuBXgyUeA6p7A92cOBxnf6a-m/view?usp=sharing",
       "_blank"
     );
   };
