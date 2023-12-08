@@ -27,7 +27,6 @@ export const Project = () => {
         "https://user-images.githubusercontent.com/58412185/264219678-e2d6ba64-cc88-4f80-83cf-da01b6ff32fd.png",
         "https://user-images.githubusercontent.com/58412185/264219779-a3ddca74-8886-499b-a45d-b62a2d7190af.png",
         "https://user-images.githubusercontent.com/58412185/264219881-e2d7e2a1-112e-47e1-9542-846eedeb3e66.png",
-        "https://user-images.githubusercontent.com/58412185/264219992-99487bb6-2b76-4843-a008-d5ad083e69e4.png",
         "https://user-images.githubusercontent.com/58412185/264220145-a394055c-830b-485d-b0b9-b6ba8e702e44.png",
 
     
