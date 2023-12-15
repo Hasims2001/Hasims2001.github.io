@@ -181,6 +181,17 @@
   transform: scale(0.55);
 }
 
+/* normal */
+.normal_cloud{
+  animation: none;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+  margin: 3rem 0;
+}
+.normal_cloud > p{
+  font-size: larger;
+}
 /* OBJECTS */
 
 .sliding_cloud {

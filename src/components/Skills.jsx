@@ -1,7 +1,19 @@
-import { Box, Heading, Image} from "@chakra-ui/react";
+import { Box, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 // import "../styles/smallcloud.css";
 import "../styles/simplecloud.css";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
+  Flex,
+} from "@chakra-ui/react";
 
 // icons
 import htmlIcon from "../image/htmlIcon.png";
@@ -22,7 +34,9 @@ import promptIcon from "../image/promptIcon.png";
 import pythonIcon from "../image/pythonIcon.png";
 import flaskIcon from "../image/flaskIcon.png";
 import { styled } from "styled-components";
+import { NormalCloud } from "./NormalCloud";
 export const Skills = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const arrSkill = [
     {
       id: 1,
@@ -47,17 +61,17 @@ export const Skills = () => {
     {
       id: 9,
       skill: "Prompt Eng.",
-      img: promptIcon
+      img: promptIcon,
     },
     {
       id: 10,
       skill: "Python",
-      img: pythonIcon
+      img: pythonIcon,
     },
     {
       id: 11,
       skill: "Flask",
-      img: flaskIcon
+      img: flaskIcon,
     },
     {
       id: 5,
@@ -120,50 +134,83 @@ export const Skills = () => {
       </Box>
 
       <DIV>
-        <div id="background-wrap" style={{ paddingTop: "0px" }}>
-          <div className="animation-container">
-            {arrSkill.reverse().map(({ id, skill, img }) => (
-              <div key={id} className="x2 skills-card">
-                <div className="sliding_cloud">
-                  <p className="skills-card-name" >{skill}</p>
-                  <Image
-                    position={"absolute"}
-                    top={16}
-                    w={"40%"}
-                    className="skills-card-img"
-                    animation={"roatedImage 5s linear infinite"}
-                    filter={"drop-shadow(-10px 5px 0px #000000)"}
-                    left={24}
-                    src={img}
-                  ></Image>
+        <Box cursor={"pointer"} onClick={onOpen}>
+          <div id="background-wrap" style={{ paddingTop: "0px" }}>
+            <div className="animation-container">
+              {arrSkill.reverse().map(({ id, skill, img }) => (
+                <div key={id} className="x2 skills-card">
+                  <div className="sliding_cloud">
+                    <p className="skills-card-name">{skill}</p>
+                    <Image
+                      position={"absolute"}
+                      top={16}
+                      w={"40%"}
+                      className="skills-card-img"
+                      animation={"roatedImage 5s linear infinite"}
+                      filter={"drop-shadow(-5px 5px 0px #000000)"}
+                      left={24}
+                      src={img}
+                    ></Image>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div id="background-wrap">
-          <div className="animation-container">
-            {arrToolSkill.reverse().map(({ id, skill, img }) => (
-              <div key={id} className="x2 skills-card">
-                <div className="sliding_cloud">
-                  <p className="skills-card-name">{skill}</p>
-                  <Image
-                    position={"absolute"}
-                    zIndex={1}
-                    top={16}
-                    w={"45%"}
-                    className="skills-card-img"
-                    animation={"roatedImage 5s linear infinite"}
-                    filter={"drop-shadow(-10px 5px 0px #000000)"}
-                    left={24}
-                    src={img}
-                  ></Image>
+          <div id="background-wrap">
+            <div className="animation-container">
+              {arrToolSkill.reverse().map(({ id, skill, img }) => (
+                <div key={id} className="x2 skills-card">
+                  <div className="sliding_cloud">
+                    <p className="skills-card-name">{skill}</p>
+                    <Image
+                      position={"absolute"}
+                      zIndex={1}
+                      top={16}
+                      w={"40%"}
+                      className="skills-card-img"
+                      animation={"roatedImage 5s linear infinite"}
+                      filter={"drop-shadow(-5px 5px 0px #000000)"}
+                      left={24}
+                      src={img}
+                    ></Image>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </Box>
+        <Modal size={"3xl"} isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent bgColor={"brand.100"}>
+            <ModalHeader fontSize={"2xl"} >
+              Tech Stack
+            </ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Flex justifyContent={'center'} alignItems={['center', 'center', 'center', "center", "flex-start", "flex-start", "flex-start",]} direction={[
+            "column",
+            "column",
+            "column",
+            "column",
+            "row",
+            "row",
+            "row",
+          ]}>
+                  <div className="animation-container">
+                    {arrSkill.reverse().map(({ id, skill, img }) => (
+                      <NormalCloud id={id} skill={skill} img={img} />
+                    ))}
+                  </div>
+                  <div className="animation-container">
+                    {arrToolSkill.reverse().map(({ id, skill, img }) => (
+                      <NormalCloud id={id} skill={skill} img={img} />
+                    ))}
+                  </div>
+              </Flex>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </DIV>
     </Box>
   );
