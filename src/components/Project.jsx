@@ -42,13 +42,13 @@ export const Project = () => {
         "Cutting-edge job matching platform leverages the power of GenAI integration, empowering recruiters to connect with ideal candidates and enabling job seekers to discover tailored opportunities.",
     
       image: [
-       "https://github.com/Hasims2001/TalentForge/assets/58412185/7be9828e-fd56-42bb-8980-828715c204d1",
-       "https://github.com/Hasims2001/TalentForge/assets/58412185/9bacaba2-2292-4810-9a10-d4b5232798c4",
-       "https://github.com/Hasims2001/TalentForge/assets/58412185/310a36c3-6c38-4434-a530-cbef388d9ca4",
-       "https://github.com/Hasims2001/TalentForge/assets/58412185/28a64051-e401-47c0-b9d2-e36e5ab5d448",
-       "https://github.com/Hasims2001/TalentForge/assets/58412185/c269d8ed-78b4-4c4b-951b-f6a2c448741c",
-       "https://github.com/Hasims2001/TalentForge/assets/58412185/7f0ef349-f76d-4b6e-b749-036103018b45",
-       "https://github.com/Hasims2001/TalentForge/assets/58412185/c3a1e326-f020-40e5-8295-150d50e71f00",
+       "https://user-images.githubusercontent.com/58412185/287499734-7be9828e-fd56-42bb-8980-828715c204d1.png",
+       "https://user-images.githubusercontent.com/58412185/287499779-9bacaba2-2292-4810-9a10-d4b5232798c4.png",
+       "https://user-images.githubusercontent.com/58412185/287499749-310a36c3-6c38-4434-a530-cbef388d9ca4.png",
+       "https://user-images.githubusercontent.com/58412185/287499823-28a64051-e401-47c0-b9d2-e36e5ab5d448.png",
+       "https://user-images.githubusercontent.com/58412185/287501073-c269d8ed-78b4-4c4b-951b-f6a2c448741c.png",
+       "https://user-images.githubusercontent.com/58412185/287501085-7f0ef349-f76d-4b6e-b749-036103018b45.png",
+       "https://user-images.githubusercontent.com/58412185/287501107-c3a1e326-f020-40e5-8295-150d50e71f00.png",
 
     
       ],

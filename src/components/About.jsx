@@ -11,7 +11,7 @@ import profile from "../image/profile.png";
 import download from "../image/download.png";
 import { useState } from "react";
 import { useEffect } from "react";
-export const About = ({ scrollPosition }) => {
+export const About = () => {
   // "- Include your name, only 1 professional photo, and a formal introduction of 2-3 lines?.
   // - Check if you're About me/Homepage section is responsive on different screen sizes"
   const [namingAnimate, setNamingAnimate] = useState([
@@ -20,14 +20,9 @@ export const About = ({ scrollPosition }) => {
     // "animate__flipInX",
     // "animate__slow",
   ]);
-  const handleClick = () => {
-    window.open(
-      "https://drive.google.com/file/d/1NMF1P8tBuBXgyUeA6p7A92cOBxnf6a-m/view?usp=sharing",
-      "_blank"
-    );
-  };
-  useEffect(() => {
-    if (scrollPosition >= 3) {
+  const handleScroll = () => {
+    const scrollPosition = window.pageYOffset;
+    if (scrollPosition >= 1) {
       setNamingAnimate([
         "animate__animated",
         "animate__slideOutDown",
@@ -41,7 +36,21 @@ export const About = ({ scrollPosition }) => {
         "animate__slow",
       ]);
     }
-  }, [scrollPosition]);
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [])
+  const handleClick = () => {
+    window.open(
+      "https://drive.google.com/file/d/1NMF1P8tBuBXgyUeA6p7A92cOBxnf6a-m/view?usp=sharing",
+      "_blank"
+    );
+  };
+
 
   return (
     <div id="about" className="about section">

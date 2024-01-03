@@ -6,27 +6,16 @@ import { Project } from './components/Project';
 import { Box } from '@chakra-ui/react';
 import { Contact } from './components/Contact';
 import { GitHubStat } from './components/GitHubStat';
-import { useEffect, useState } from 'react';
+
 
 function App() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  })
+ 
 
   return (
     <div className="App" id='home' style={{ color: "white", minHeight: "100vh", backgroundColor: "#659DBD" }}>
       <Navbar />
       <Box id="section2">
-        <About scrollPosition={scrollPosition} />
+        <About  />
       </Box>
       <Box id="section3">
         <Skills />

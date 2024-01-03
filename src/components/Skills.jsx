@@ -1,20 +1,8 @@
 import { Box, Heading, Image } from "@chakra-ui/react";
-import React from "react";
-// import "../styles/smallcloud.css";
+import React, { memo,  useEffect,  useRef, useState  } from "react";
 import "../styles/simplecloud.css";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  Button,
-  Flex,
-} from "@chakra-ui/react";
 
+import { motion, useTransform, useScroll } from "framer-motion";
 // icons
 import htmlIcon from "../image/htmlIcon.png";
 import cssIcon from "../image/cssIcon.png";
@@ -34,134 +22,157 @@ import promptIcon from "../image/promptIcon.png";
 import pythonIcon from "../image/pythonIcon.png";
 import flaskIcon from "../image/flaskIcon.png";
 import { styled } from "styled-components";
-import { NormalCloud } from "./NormalCloud";
-export const Skills = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const arrSkill = [
-    {
-      id: 1,
-      skill: "HTML",
-      img: htmlIcon,
-    },
-    {
-      id: 2,
-      skill: "CSS",
-      img: cssIcon,
-    },
-    {
-      id: 3,
-      skill: "JavaScript",
-      img: javascriptIcon,
-    },
-    {
-      id: 4,
-      skill: "MongoDB",
-      img: mongodbIcon,
-    },
-    {
-      id: 9,
-      skill: "Prompt Eng.",
-      img: promptIcon,
-    },
-    {
-      id: 10,
-      skill: "Python",
-      img: pythonIcon,
-    },
-    {
-      id: 11,
-      skill: "Flask",
-      img: flaskIcon,
-    },
-    {
-      id: 5,
-      skill: "Express",
-      img: expressIcon,
-    },
-    {
-      id: 6,
-      skill: "React.js",
-      img: reactIcon,
-    },
-    {
-      id: 7,
-      skill: "Node.js",
-      img: nodejsIcon,
-    },
+const arrSkill = [
+  {
+    id: 1,
+    skill: "HTML",
+    img: htmlIcon,
+  },
+  {
+    id: 2,
+    skill: "CSS",
+    img: cssIcon,
+  },
+  {
+    id: 3,
+    skill: "JavaScript",
+    img: javascriptIcon,
+  },
+  {
+    id: 4,
+    skill: "MongoDB",
+    img: mongodbIcon,
+  },
+  {
+    id: 9,
+    skill: "Prompt Eng.",
+    img: promptIcon,
+  },
+  {
+    id: 10,
+    skill: "Python",
+    img: pythonIcon,
+  },
+  {
+    id: 11,
+    skill: "Flask",
+    img: flaskIcon,
+  },
+  {
+    id: 5,
+    skill: "Express",
+    img: expressIcon,
+  },
+  {
+    id: 6,
+    skill: "React.js",
+    img: reactIcon,
+  },
+  {
+    id: 7,
+    skill: "Node.js",
+    img: nodejsIcon,
+  },
 
-    {
-      id: 8,
-      skill: "Redux",
-      img: reduxIcon,
-    },
-  ];
-  const arrToolSkill = [
-    {
-      id: 1,
-      skill: "Git",
-      img: gitIcon,
-    },
-    {
-      id: 2,
-      skill: "GitHub",
-      img: githubIcon,
-    },
-    {
-      id: 3,
-      skill: "Android",
-      img: androidIcon,
-    },
-    {
-      id: 4,
-      skill: "Postman",
-      img: postmanIcon,
-    },
-    {
-      id: 5,
-      skill: "Firebase",
-      img: firebaseIcon,
-    },
-    {
-      id: 6,
-      skill: "Cypress",
-      img: cypressIcon,
-    },
-  ];
+  {
+    id: 8,
+    skill: "Redux",
+    img: reduxIcon,
+  },
+];
+const arrToolSkill = [
+  {
+    id: 1,
+    skill: "Git",
+    img: gitIcon,
+  },
+  {
+    id: 2,
+    skill: "GitHub",
+    img: githubIcon,
+  },
+  {
+    id: 3,
+    skill: "Android",
+    img: androidIcon,
+  },
+  {
+    id: 4,
+    skill: "Postman",
+    img: postmanIcon,
+  },
+  {
+    id: 5,
+    skill: "Firebase",
+    img: firebaseIcon,
+  },
+  {
+    id: 6,
+    skill: "Cypress",
+    img: cypressIcon,
+  },
+];
+
+export const Skills = () => {
+
+
+
   return (
-    <Box m={"2rem 0"} id="skills">
-      <Box mb={"2rem"}>
+    <Box m={"2rem 0"} id="skills" height={'300vh'}>
+      <Box >
         <Heading color={"brand.400"}>Tech Stacks</Heading>
       </Box>
-
       <DIV>
-        <Box cursor={"pointer"} onClick={onOpen}>
-          <div id="background-wrap" style={{ paddingTop: "0px" }}>
-            <div className="animation-container">
-              {arrSkill.reverse().map(({ id, skill, img }) => (
-                <div key={id} className="x2 skills-card">
-                  <div className="sliding_cloud">
+<HorizontalScrollCarousel />
+    
+      </DIV>
+    </Box>
+  );
+};
+const HorizontalScrollCarousel = memo(()=>{
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+
+
+  return (
+<SECTION ref={targetRef}>
+      <div className="wrapper">
+        
+        <motion.div style={{ x }} className="small-wrapper">
+         <SkillCard />
+        </motion.div>
+      </div>
+    </SECTION>
+  )
+})
+
+const SkillCard = memo(()=>{
+
+  return (
+    <>
+      {arrSkill.map(({ id, skill, img }) => (
+                <div key={id} className="x2 skills-card" >
+                  <div className="sliding_cloud" >
                     <p className="skills-card-name">{skill}</p>
                     <Image
                       position={"absolute"}
                       top={16}
                       w={"40%"}
                       className="skills-card-img"
-                      animation={"roatedImage 5s linear infinite"}
                       filter={"drop-shadow(-5px 5px 0px #000000)"}
                       left={24}
+                      zIndex={1}
                       src={img}
                     ></Image>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div id="background-wrap">
-            <div className="animation-container">
-              {arrToolSkill.reverse().map(({ id, skill, img }) => (
-                <div key={id} className="x2 skills-card">
-                  <div className="sliding_cloud">
+        {arrToolSkill.map(({ id, skill, img }) => (
+                <div key={id} className="x2 skills-card" >
+                  <div className="sliding_cloud" >
                     <p className="skills-card-name">{skill}</p>
                     <Image
                       position={"absolute"}
@@ -169,7 +180,7 @@ export const Skills = () => {
                       top={16}
                       w={"40%"}
                       className="skills-card-img"
-                      animation={"roatedImage 5s linear infinite"}
+                      // animation={"roatedImage 5s linear infinite"}
                       filter={"drop-shadow(-5px 5px 0px #000000)"}
                       left={24}
                       src={img}
@@ -177,48 +188,29 @@ export const Skills = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </Box>
-        <Modal size={"3xl"} isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent bgColor={"brand.100"}>
-            <ModalHeader fontSize={"2xl"} >
-              Tech Stack
-            </ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <Flex justifyContent={'center'} alignItems={['center', 'center', 'center', "center", "flex-start", "flex-start", "flex-start",]} direction={[
-            "column",
-            "column",
-            "column",
-            "column",
-            "row",
-            "row",
-            "row",
-          ]}>
-                  <div className="animation-container">
-                    {arrSkill.reverse().map(({ id, skill, img }) => (
-                      <NormalCloud id={id} skill={skill} img={img} />
-                    ))}
-                  </div>
-                  <div className="animation-container">
-                    {arrToolSkill.reverse().map(({ id, skill, img }) => (
-                      <NormalCloud id={id} skill={skill} img={img} />
-                    ))}
-                  </div>
-              </Flex>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      </DIV>
-    </Box>
-  );
-};
+              </>
+  )
+})
+const SECTION = styled.section`
+ position: relative;
+ height: 300vh;
 
+.wrapper{
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+
+}
+.small-wrapper{
+  display: flex;
+
+}
+`
 const DIV = styled.div`
   position: relative;
-  height: 20rem;
 
   @-webkit-keyframes roatedImage {
     0% {
@@ -237,19 +229,10 @@ const DIV = styled.div`
       transform: rotate(-20deg);
     }
   }
-  #background-wrap {
-    padding-top: 200px;
-  }
-  .animation-container {
-    display: flex;
-    animation: skillAnimateCloud 30s linear infinite;
-    animation-delay: -1000s;
-    overflow: hidden;
-    height: 200px;
-    position: relative;
-  }
+ 
   .x2 {
     animation: none;
+    z-index: 1;
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
     transform: scale(0.5);

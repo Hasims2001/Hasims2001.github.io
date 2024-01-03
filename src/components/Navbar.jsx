@@ -6,9 +6,6 @@ import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import download from "../image/download.png";
 
 export const Navbar = () => {
-  // "-NavBar should have Home, About Me, Skills, Project, Contact & Resume
-  // -NavBar should be responsive
-  // -NavBar should be sticky or fixed"
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
   const isBigScreen = useMediaQuery({ query: "(min-width: 769px)" });
   const [show, setShow] = useState(false);
