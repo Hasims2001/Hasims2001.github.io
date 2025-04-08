@@ -1,12 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.b5b3e723.css",
-    "main.js": "/static/js/main.fcfb59c7.js",
+    "main.js": "/static/js/main.101fec77.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/resume.pdf": "/static/media/resume.591290c200b025e6dcc9.pdf",
+    "static/media/resume.pdf": "/static/media/resume.bc83d3919210692c105b.pdf",
+    "static/media/1_cotds.PNG": "/static/media/1_cotds.2833fe0b89111995160b.PNG",
     "static/media/profile.png": "/static/media/profile.8a030816823e2d640cd5.png",
+    "static/media/1_blogGTP.png": "/static/media/1_blogGTP.ff7d535ae995008fd606.png",
+    "static/media/4_cotds.PNG": "/static/media/4_cotds.0ed646f4e3d90760847c.PNG",
+    "static/media/2_cotds.PNG": "/static/media/2_cotds.db7e9a537f69c801ef06.PNG",
+    "static/media/jiraIcon.png": "/static/media/jiraIcon.4c2514a2fa425341b9b3.png",
+    "static/media/3_cotds.PNG": "/static/media/3_cotds.47228462774f1aeed3a8.PNG",
     "static/media/pythonIcon.png": "/static/media/pythonIcon.dea924d737bb84eb9ce3.png",
+    "static/media/2_mernerp.PNG": "/static/media/2_mernerp.f809127f3f665e5b5151.PNG",
+    "static/media/2_blogGTP.PNG": "/static/media/2_blogGTP.aa6e25390d4862b205c2.PNG",
+    "static/media/1_mernerp.PNG": "/static/media/1_mernerp.35aa60985cbdb6432c99.PNG",
+    "static/media/3_mernerp.PNG": "/static/media/3_mernerp.39fed900b952dbef8306.PNG",
+    "static/media/4_blogGTP.PNG": "/static/media/4_blogGTP.4bb0bd942bd31c3d5f0d.PNG",
+    "static/media/3_blogGTP.PNG": "/static/media/3_blogGTP.d7b6f8299856f535f8da.PNG",
+    "static/media/4_mernerp.PNG": "/static/media/4_mernerp.e89b795f76f07dff0d6b.PNG",
     "static/media/flaskIcon.png": "/static/media/flaskIcon.7f090c9fb67742a01b54.png",
+    "static/media/djangoIcon.png": "/static/media/djangoIcon.e2d0ed2e07fbbc1c4dd9.png",
     "static/media/poppins-devanagari-400-normal.woff": "/static/media/poppins-devanagari-400-normal.0e11b62db931f85340d4.woff",
     "static/media/mongodbIcon.png": "/static/media/mongodbIcon.f717d0a8ce2990e228e2.png",
     "static/media/poppins-devanagari-400-normal.woff2": "/static/media/poppins-devanagari-400-normal.64d5f06ee726edd58ca3.woff2",
@@ -27,11 +41,11 @@
     "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.4f38b4331448d2313adc.woff2",
     "index.html": "/index.html",
     "main.b5b3e723.css.map": "/static/css/main.b5b3e723.css.map",
-    "main.fcfb59c7.js.map": "/static/js/main.fcfb59c7.js.map",
+    "main.101fec77.js.map": "/static/js/main.101fec77.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5b3e723.css",
-    "static/js/main.fcfb59c7.js"
+    "static/js/main.101fec77.js"
   ]
 }
